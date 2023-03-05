@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Conversor de moneda</title>
+</head>
+
+<body>
+  <h2>Conversor de moneda</h2>
+  <form class="formulario">
+    <p>Seleccionar moneda</p>
+
+    <input type="radio" name="cambio" id="euro">Euro
+    <input type="radio" name="cambio" id="dolar">Dolar
+    <input type="radio" name="cambio" id="real">Real
+    <input type="radio" name="cambio" id="libra">Libra
+
+    <p>Ingresar monto</p>
+
+    <input type="numero" id="valor" min="0" max="1000000" placeholder="Ingresar monto a cotizar">
+    <input type="button" id="cotizador" value="cotizar" >
+    <input type="numero" id="resultado" value="" placeholder="resultado">
+  </form>
+
+  <form id="buscarMoneda">
+    <input type="text" id="moneda" autocomplete="off" placeholder="Ingrese moneda a buscar">
+    <button type="submit"> Buscar Moneda</button>
+  </form>
+
+<table id="tablaMonedas">
+  <thead>
+    <tr>
+      <th>Moneda</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <tr>
+      <td>DÓLAR BLUE</td>
+      <td>$375,00</td>
+    </tr>
+    <tr>
+      <td>DÓLAR BNA</td>
+      <td>$187,00</td>
+    </tr>
+    <tr>
+      <td>DÓLAR CDO C/LIQ</td>
+      <td>$336,98</td>
+    </tr>
+    <tr>
+      <td>DÓLAR MEP</td>
+      <td>$356,15</td>
+    </tr>
+    <tr>
+      <td>DÓLAR MEP CONTADO</td>
+      <td> $357,34</td>
+    </tr>
+    <tr>
+      <td>DÓLAR SOLIDARIO$</td>
+      <td> $321,75</td>
+    </tr>
+    <tr>
+      <td>DÓLAR TARJETA</td>
+      <td>$327,25</td>
+    </tr>
+    <tr>
+      <td>DÓLAR TURISTA</td>
+      <td>$374,00</td>
+    </tr>
+    <tr>
+      <td>EURO</td>
+      <td>$203,00</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+<div id="ValorDeMonedas">
+  <h3>Valor entre pares de Monedas:</h3>
+
+  <label for="base">Seleccionar base:</label>
+
+<select id="base">
+
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+  <option value="JPY">JPY</option>
+  <option value="CAD">CAD</option>
+
+</select>
+
+<button id="boton">Obtener tasa</button>
+
+</div>
+
+</body>
+
+<script src="js/mains.js"></script>
+</html>
