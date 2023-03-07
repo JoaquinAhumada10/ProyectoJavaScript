@@ -1,106 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Conversor de moneda</title>
-</head>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Conversor Moneda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
 
-<body>
-  <h2>Conversor de moneda</h2>
-  <form class="formulario">
-    <p>Seleccionar moneda</p>
+    <div class="wrapper">
+      <header>Conversor de Moneda</header>
 
-    <input type="radio" name="cambio" id="euro">Euro
-    <input type="radio" name="cambio" id="dolar">Dolar
-    <input type="radio" name="cambio" id="real">Real
-    <input type="radio" name="cambio" id="libra">Libra
+      <form action="#">
 
-    <p>Ingresar monto</p>
+        <div class="amount">
+          <p>Ingresar Cantidad</p>
+          <input type="text" value="1">
+        </div>
 
-    <input type="numero" id="valor" min="0" max="1000000" placeholder="Ingresar monto a cotizar">
-    <input type="button" id="cotizador" value="cotizar" >
-    <input type="numero" id="resultado" value="" placeholder="resultado">
-  </form>
+        <div class="drop-list">
 
-  <form id="buscarMoneda">
-    <input type="text" id="moneda" autocomplete="off" placeholder="Ingrese moneda a buscar">
-    <button type="submit"> Buscar Moneda</button>
-  </form>
+          <div class="from">
+            <p>De</p>
 
-<table id="tablaMonedas">
-  <thead>
-    <tr>
-      <th>Moneda</th>
-      <th>Valor</th>
-    </tr>
-  </thead>
+            <div class="select-box">
+              <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
 
+          </div>
 
-  <tbody>
-    <tr>
-      <td>DÓLAR BLUE</td>
-      <td>$375,00</td>
-    </tr>
-    <tr>
-      <td>DÓLAR BNA</td>
-      <td>$187,00</td>
-    </tr>
-    <tr>
-      <td>DÓLAR CDO C/LIQ</td>
-      <td>$336,98</td>
-    </tr>
-    <tr>
-      <td>DÓLAR MEP</td>
-      <td>$356,15</td>
-    </tr>
-    <tr>
-      <td>DÓLAR MEP CONTADO</td>
-      <td> $357,34</td>
-    </tr>
-    <tr>
-      <td>DÓLAR SOLIDARIO$</td>
-      <td> $321,75</td>
-    </tr>
-    <tr>
-      <td>DÓLAR TARJETA</td>
-      <td>$327,25</td>
-    </tr>
-    <tr>
-      <td>DÓLAR TURISTA</td>
-      <td>$374,00</td>
-    </tr>
-    <tr>
-      <td>EURO</td>
-      <td>$203,00</td>
-    </tr>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
 
+          <div class="to">
+            <p>A</p>
 
-  </tbody>
-</table>
+            <div class="select-box">
+              <img src="https://flagcdn.com/48x36/np.png" alt="flag">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
 
-<div id="ValorDeMonedas">
-  <h3>Valor entre pares de Monedas:</h3>
+          </div>
 
-  <label for="base">Seleccionar base:</label>
+        </div>
 
-<select id="base">
+        <div class="exchange-rate">Obteniendo valor de intercambio</div>
+        <button>Obtenga el valor de intercambio</button>
+      </form>
 
-  <option value="USD">USD</option>
-  <option value="EUR">EUR</option>
-  <option value="GBP">GBP</option>
-  <option value="JPY">JPY</option>
-  <option value="CAD">CAD</option>
+    </div>
 
-</select>
+    <script src="js/country-list.js"></script>
+    <script src="js/script.js
+    "></script>
 
-<button id="boton">Obtener tasa</button>
-
-</div>
-
-</body>
-
-<script src="js/mains.js"></script>
+  </body>
 </html>
